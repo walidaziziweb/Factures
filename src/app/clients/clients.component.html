@@ -1,0 +1,70 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Striped Table with Hover</h4>
+                        <p class="category">Here is a subtitle for this table</p>
+                    </div>
+                    <div class="content table-responsive table-full-width">
+                          <table data-table  class="table table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th *ngFor="let cell of tableData1.headerRow">{{ cell }}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let row of tableData1.dataRows">
+                                        <td *ngFor="let cell of row">{{cell}}</td>
+                                        <td class="td-actions text-right" [height]="10">
+                                            <h6><button type="button" title="Edit Task" class="btn btn-info btn-simple btn">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                            <button type="button" title="Remove" class="btn btn-danger btn-simple btn">
+                                                <i class="fa fa-times"></i>
+                                            </button></h6>
+                                        </td>
+                                    </tr>
+                                    <tr *ngFor="let pading of tableData1.pagingTable">
+
+                                    </tr>
+                                </tbody>
+                          </table>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card card-plain">
+                    <div class="header">
+                        <h4 class="title">Table on Plain Background</h4>
+                        <p class="category">Here is a subtitle for this table</p>
+                    </div>
+                    <div class="content table-responsive table-full-width">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th *ngFor="let cell of tableData2.headerRow">{{ cell }}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let row of tableData2.dataRows">
+                                    <td *ngFor="let cell of row">{{cell}}</td>
+                                    <td class="td-actions text-right">
+                                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                            <i class="fa fa-edit"></i>
+                                        </button>
+                                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                            <i class="fa fa-times"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
